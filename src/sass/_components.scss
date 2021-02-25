@@ -1,0 +1,53 @@
+//Utility
+.-u-btn {
+    margin-right: 50%;
+    transform: translateX(50%);
+ }
+ 
+//Button
+.btn {
+
+    color: white;
+    width: 300px;
+    height: 100px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 0 1px 0;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    font-size: larger;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 0;
+    transition: all 1s;
+    user-select: none;
+   
+
+    -webkit-tap-highlight-color: transparent;
+    //makes background transpatrent
+    
+
+    &::before {
+    
+     position: absolute;
+     background-color: rgb(0, 0, 0);
+     z-index: -1;
+     content: "";
+     transition: all 1s;
+     width: 100%;
+     height: 101%;   
+     display: flex; 
+     align-items: center;
+
+    }
+
+    &:hover{
+
+        background-color: #387bb6;
+
+        &::before {
+            width: 0;
+            background-color: #387bb6;
+        }
+    }
+}
